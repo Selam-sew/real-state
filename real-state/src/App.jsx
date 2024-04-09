@@ -10,7 +10,6 @@ import PageNotFound from './pages/PageNotFound'
 const App = () => {
   const [PropertyForsale, setPropertyForSale] = useState([]);
   const [PropertyForrent, setPropertyForRent] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
