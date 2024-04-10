@@ -48,3 +48,39 @@ const rentingFeatures = [
         description: "Create a profile to save time filling out applications and get alerts on new listings."
     }
 ]
+
+export const linkInfo = [
+    {
+      id: 1,
+      title: "Home",
+      path: "/",
+    },
+    {
+      id: 2,
+      title: "Buy",
+      path: "/buy",
+    },
+    {
+      id: 3,
+      title: "Rent",
+      path: "/rent",
+    },
+    {
+        id: 4,
+        title: "About Us",
+        path:"/aboutus"
+    }
+];
+  
+export const buttons = [
+    {
+        id: 1,
+        title: 'Sign In',
+        path: '/signin'
+    },
+    {
+        id: 2,
+        title: 'Sign Up',
+        path: '/signup'
+    }
+]

@@ -1,15 +1,17 @@
-import HeroSection from '../containers/HeroSection'
-import Features from '../containers/Features'
-import Properties from '../components/Properties'
+import HeroSection from "../containers/HeroSection";
+import Features from "../containers/Features";
+import Sales from "../containers/sales";
+import Rent from '../containers/Rent'
 
 const Home = () => {
   return (
-    <div >
+    <div>
       <HeroSection />
       <Features />
-      {/* <Properties/> */}
+      <Sales/>
+      <Rent/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

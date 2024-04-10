@@ -2,7 +2,7 @@ import React from 'react'
 
 const filter = () => {
   return (
-    <div>
+    <div className='mb-4'>
       filter
     </div>
   )
