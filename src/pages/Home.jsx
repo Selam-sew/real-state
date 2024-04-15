@@ -2,6 +2,7 @@ import HeroSection from "../containers/HeroSection";
 import Features from "../containers/Features";
 import Sales from "../containers/sales";
 import Rent from '../containers/Rent'
+import Agents from "../containers/Agents";
 
 const Home = () => {
   return (
@@ -9,7 +10,8 @@ const Home = () => {
       <HeroSection />
       <Features />
       <Sales/>
-      <Rent/>
+      <Rent />
+      <Agents/>
     </div>
   );
 };

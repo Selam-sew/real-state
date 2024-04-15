@@ -5,6 +5,27 @@ import image4 from "../assets/keys.png"
 import image5 from "../assets/direction.png"
 import image6 from "../assets/profile.png"
 
+export const Agents = [
+    {
+        id: 1,
+        image: "",
+        name: "Jane Doe",
+        Adress:"Qatar"
+    },
+    {
+        id: 1,
+        image: "",
+        name: "John Doe",
+        Adress:"Dubai"
+    },
+    {
+        id: 1,
+        image: "",
+        name: "Mike Mentzer",
+        Adress:"Abu Dhabi"
+    }
+]
+
 export const buyFeatures = [
     {
         id: 1,
@@ -54,6 +75,10 @@ export const linkInfo = [
       id: 1,
       title: "Home",
       path: "/",
+    },
+    {
+        title: "Search",
+        path:"/search"
     },
     {
       id: 2,

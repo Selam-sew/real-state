@@ -7,34 +7,27 @@ import Rent from "./pages/Rent";
 import Layout from "./components/layout";
 import PageNotFound from "./pages/PageNotFound";
 import { PropertyContext } from "./context/property";
-import AboutUs from './pages/About'
+import AboutUs from "./pages/About";
+import Search from "./pages/Search";
 const App = () => {
   const [PropertyForSale, setPropertyForSale] = useState([]);
   const [PropertyForRent, setPropertyForRent] = useState([]);
-  const [PropertyForSale2, setPropertyForSale2] = useState([]);
-  const [PropertyForRent2, setPropertyForRent2] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const propertyForSale = await fetchApi(
-          `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=12`
+        const urls = [
+          `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=21`,
+          `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=21`,
+        ];
+
+        const promises = urls.map((url) => fetchApi(url));
+        const [propertyForSale, propertyForRent, Agents] = await Promise.all(
+          promises
         );
 
-        const propertyForSale2 = await fetchApi(
-          `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`
-        );
         setPropertyForSale(propertyForSale?.hits || []);
-        setPropertyForSale2(propertyForSale2?.hits || []);
-
-        const propertyForRent = await fetchApi(
-          `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=12`
-        );
-        const propertyForRent2 = await fetchApi(
-          `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`
-        );
         setPropertyForRent(propertyForRent?.hits || []);
-        setPropertyForRent2(propertyForRent2?.hits || []);
       } catch (error) {
         console.error("error fetching properties", error);
       }
@@ -49,8 +42,6 @@ const App = () => {
           value={{
             PropertyForSale,
             PropertyForRent,
-            PropertyForSale2,
-            PropertyForRent2,
           }}
         >
           <Routes>
@@ -59,7 +50,8 @@ const App = () => {
               <Route index element={<Home />} />
               <Route path="buy" element={<Buy />} />
               <Route path="rent" element={<Rent />} />
-              <Route path="aboutus" element={<AboutUs/>}/>
+              <Route path="aboutus" element={<AboutUs />} />
+              <Route path="search" element={<Search />} />
             </Route>
           </Routes>{" "}
         </PropertyContext.Provider>

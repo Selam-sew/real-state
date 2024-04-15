@@ -7,7 +7,7 @@ import Button from "./Button";
 
 const NavBar = () => {
   const [clicked, setClicked] = useState(false);
-
+  
   const toggleButtonRef = useRef(null);
   const handleClick = () => {
     setClicked(!clicked);
