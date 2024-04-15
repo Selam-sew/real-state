@@ -7,6 +7,7 @@ import Select from "@mui/material/Select";
 import { PropertyContext } from "../context/property";
 const Properties = React.lazy(() => import("../components/Properties"));
 import Loading from "../components/Loading";
+import Pagination from "../components/Pagination";
 
 export default function Search() {
   const { PropertyForSale, PropertyForRent } =
@@ -16,7 +17,7 @@ export default function Search() {
   const [rooms, setRooms] = React.useState("");
   const [baths, setBaths] = React.useState("");
   const [purpose, setPurpose] = React.useState("");
-  const [filtered, setFiltered] = React.useState([]);
+  const [filtered, setFiltered] = React.useState(PropertyForSale);
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -53,6 +54,7 @@ export default function Search() {
     );
   return (
     <>
+      {/* {console.log(filtered)} */}
       <div className="flex mb-4 flex-col gap-4 md:gap-8 sm:flex-row justify-center items-center bg-[#E6E5E5] py-5 mt-2 mx-4">
         <div className="flex gap-4 md:gap-8 justify-around">
           {purpose === "for rent" && (
@@ -224,6 +226,11 @@ export default function Search() {
             </React.Suspense>
           ))}
         </div>{" "}
+
+        <div className="flex justify-center mt-4">
+                 <Pagination/>
+
+        </div>
       </div>
     </>
   );

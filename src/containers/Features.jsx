@@ -6,7 +6,7 @@ import { buyFeatures } from "../constant/BuyFeature"
 const features = () => {
     return (
       
-        <div className="mx-8 mt-12">
+        <div className="mx-8 mt-16">
             <h2 className="font-semibold mb-4 text-[1.4rem]">Discover how we can help</h2>
             <div className="flex gap-5 mb-4">
                 <button className="border-2 py-2 px-5 rounded-[2rem]">Buying</button>

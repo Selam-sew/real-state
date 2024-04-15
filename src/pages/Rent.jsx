@@ -1,6 +1,7 @@
 import React, { Suspense, useContext } from "react";
 import { PropertyContext } from "../context/property";
 import Loading from "../components/Loading";
+import { Pagination } from "@mui/material";
 const Properties = React.lazy(() => import("../components/Properties"));
 
 const Rent = () => {
@@ -16,6 +17,7 @@ const Rent = () => {
           ))}{" "}
         </div>
       </Suspense>
+      <Pagination/>
     </div>
   );
 };

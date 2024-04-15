@@ -7,7 +7,7 @@ const Properties = React.lazy(() => import("../components/Properties.jsx"));
 const Rent = () => {
   const { PropertyForRent } = useContext(PropertyContext);
   return (
-      <div className="ml-8 md:mr-8 mt-12">
+      <div className="ml-8 md:mr-8 mt-16">
           <div className="flex items-center mr-8 md:mr-4 justify-between">
                <h1 className="font-semibold text-[1.3rem]">Homes For Rent</h1>
           <NavLink to="/rent">

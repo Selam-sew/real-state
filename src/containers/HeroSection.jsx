@@ -14,7 +14,7 @@ const HeroSection = () => {
           </div>
     <div className="flex justify-center mt-4 lg:mt-8 ml-4">
               <input type="text" placeholder="Address, School, City " className="rounded-md  mt-8 h-10 p-2 w-[20rem]" />
-              <img src={search} className="relative cursor-pointer top-4 right-8"  alt="" />
+             <NavLink to='/search' className="relative cursor-pointer top-10 right-8">  <img src={search}   alt="icon" /></NavLink>
           </div>
       <div className="flex justify-center mt-4 lg:mt-8 pb-4  gap-8">
         <NavLink to="/buy">
