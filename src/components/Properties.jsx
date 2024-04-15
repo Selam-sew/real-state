@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 import verified from "../assets/verified.png";
-import bath from "../assets/bath.png";
-import bed from "../assets/bed.png";
-import tag from "../assets/price.png";
+
 
 const Properties = ({
   property: {

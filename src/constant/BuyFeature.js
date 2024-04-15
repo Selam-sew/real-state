@@ -4,25 +4,34 @@ import image3 from "../assets/money.png"
 import image4 from "../assets/keys.png"
 import image5 from "../assets/direction.png"
 import image6 from "../assets/profile.png"
-
-export const Agents = [
+import agent1 from '../assets/headshot1.jpg'
+import agent2 from '../assets/headshot2.jpg'
+import agent3 from '../assets/headshot3.jpg'
+import agent4 from '../assets/headshot4.jpg'
+export const agents = [
     {
         id: 1,
-        image: "",
+        image: agent3,
         name: "Jane Doe",
-        Adress:"Qatar"
+        address:"Qatar"
     },
     {
-        id: 1,
-        image: "",
-        name: "John Doe",
-        Adress:"Dubai"
+        id: 2,
+        image: agent2,
+        name: "Alicia Kelly",
+        address:"Dubai"
     },
     {
-        id: 1,
-        image: "",
+        id: 3,
+        image: agent1,
         name: "Mike Mentzer",
-        Adress:"Abu Dhabi"
+        address:"Abu Dhabi"
+    },
+    {
+        id: 4,
+        image: agent4,
+        name: "Ronnie Koleman",
+        address:"Abu Dhabi"
     }
 ]
 
