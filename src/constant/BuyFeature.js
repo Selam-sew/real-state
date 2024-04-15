@@ -8,6 +8,9 @@ import agent1 from '../assets/headshot1.jpg'
 import agent2 from '../assets/headshot2.jpg'
 import agent3 from '../assets/headshot3.jpg'
 import agent4 from '../assets/headshot4.jpg'
+import facebook from '../assets/facebook.png'
+import linkedin from '../assets/linkedin.png'
+import twitter from '../assets/twitterx.png'
 export const agents = [
     {
         id: 1,
@@ -35,7 +38,21 @@ export const agents = [
     }
 ]
 
-
+export const footer = [
+    {
+        id: 1,
+        image: facebook,
+        
+    },
+    {
+        id: 2,
+        image: twitter,
+    }
+    , {
+        id: 3,
+        image:linkedin
+    }
+]
 export const buyFeatures = [
     {
         id: 1,
@@ -100,22 +117,5 @@ export const linkInfo = [
       title: "Rent",
       path: "/rent",
     },
-    {
-        id: 4,
-        title: "About Us",
-        path:"/aboutus"
-    }
+
 ];
-  
-export const buttons = [
-    {
-        id: 1,
-        title: 'Sign In',
-        path: '/signin'
-    },
-    {
-        id: 2,
-        title: 'Sign Up',
-        path: '/signup'
-    }
-]

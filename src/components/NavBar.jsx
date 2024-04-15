@@ -3,7 +3,6 @@ import icon from "../assets/icons8-hamburger-menu-50.png";
 import icon2 from "../assets/touch-icon.png";
 import { useEffect, useState, useRef } from "react";
 import {linkInfo} from '../constant/BuyFeature'
-import Button from "./Button";
 
 const NavBar = () => {
   const [clicked, setClicked] = useState(false);
@@ -73,7 +72,6 @@ const NavBar = () => {
             
             </NavLink>
         ))}
-          <Button/>
         </div>
       </div>
     </div>
